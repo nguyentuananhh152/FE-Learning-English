@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Appbar from './components/AppBar';
+
+import {
+  BrowserRouter,
+  Route
+} from 'react-router-dom';
+import { Routes  } from 'react-router-dom';
+import Search from './components/Search.js';
+import Test from './components/Test';
+import Statistical from './components/Statistical';
+import History from './components/History';
+
+// import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Appbar></Appbar>
+      <BrowserRouter>
+            <Routes>
+              <Route exact path="/" element={<Search/>} />
+              <Route exact path="/test" element={<Test/>} />
+              <Route exact path="/statistical" element={<Statistical/>}/>
+              <Route exact path="/history" element={<History/>}/>
+              {/* <Route component={NotFound} /> */}
+            </Routes>
+      </BrowserRouter>
     </div>
   );
 }
