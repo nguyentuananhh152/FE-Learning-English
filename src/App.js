@@ -7,10 +7,9 @@ import {
   Route
 } from 'react-router-dom';
 import { Routes  } from 'react-router-dom';
-import Search from './components/Search.js';
-import Test from './components/Test';
-import Statistical from './components/Statistical';
-import History from './components/History';
+import ListCourse from './components/ListCourse';
+import ListLesson from './components/ListLesson';
+import Home from './components/Home';
 
 // import NotFound from "./components/NotFound";
 
@@ -20,11 +19,9 @@ function App() {
       <Appbar></Appbar>
       <BrowserRouter>
             <Routes>
-              <Route exact path="/" element={<Search/>} />
-              <Route exact path="/test" element={<Test/>} />
-              <Route exact path="/statistical" element={<Statistical/>}/>
-              <Route exact path="/history" element={<History/>}/>
-              {/* <Route component={NotFound} /> */}
+              <Route exact path="/" element={<Home/>}/>
+              <Route exact path="/listcourse" element={<ListCourse/>}/>
+              <Route exact path="/listlesson" element={<ListLesson/>}/>
             </Routes>
       </BrowserRouter>
     </div>

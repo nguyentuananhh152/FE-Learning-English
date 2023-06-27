@@ -19,20 +19,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const search = () => {
+const home = () => {
   window.location.replace('/')
 }
 
-const test = () => {
-  window.location.replace('/test')
-}
-
-const statistical = () => {
-  window.location.replace('/statistical')
-}
-
-const history = () => {
-  window.location.replace('/history')
+const listcourse = () => {
+  window.location.replace('/listcourse')
 }
 
 
@@ -46,13 +38,10 @@ export default function Appbar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} onClick={home}>
             Translate language English - VietNamese
           </Typography>
-          <Button color="inherit" onClick={search}>Search</Button>
-          <Button color="inherit" onClick={test}>Test</Button>
-          <Button color="inherit" onClick={statistical}>Statistical</Button>
-          <Button color="inherit" onClick={history}>History</Button>
+          <Button color="inherit" onClick={listcourse}>List Course</Button>
         </Toolbar>
       </AppBar>
     </div>
