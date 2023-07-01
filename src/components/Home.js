@@ -53,7 +53,11 @@ const Home = () => {
             <Button onClick={home}>
               <img src={logo} width='100px'/>
             </Button>
-            <Button color="inherit" onClick={listcourse}>Khóa Học</Button>
+            <Button color="inherit" onClick={listcourse} 
+              style={{
+                fontWeight: "bold",
+              }}
+            >Khóa Học</Button>
           </Typography>
           <Stack spacing={2} direction="row">
               <Button variant="contained">Đăng ký</Button>
