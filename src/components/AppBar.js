@@ -5,7 +5,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Button } from '@material-ui/core';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import logo from '../img/SQL_logo.png'
+// import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,15 +36,18 @@ export default function Appbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color='white'>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title} onClick={home}>
-            Translate language English - VietNamese
+          <Typography variant="h6" className={classes.title}>
+            <Button onClick={home}>
+              <img src={logo} width='100px'/>
+            </Button>
+            <Button color="inherit" onClick={listcourse}>Khóa Học</Button>
           </Typography>
-          <Button color="inherit" onClick={listcourse}>List Course</Button>
+          <Stack spacing={2} direction="row">
+              <Button variant="contained">Đăng ký</Button>
+              <Button variant="outlined">Đăng nhập</Button>
+          </Stack>
         </Toolbar>
       </AppBar>
     </div>

@@ -16,7 +16,6 @@ import Home from './components/Home';
 function App() {
   return (
     <div>
-      <Appbar></Appbar>
       <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Home/>}/>
