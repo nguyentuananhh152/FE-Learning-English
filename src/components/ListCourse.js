@@ -14,6 +14,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import { divCourse, imgCourse } from './ListCourseStyle';
+import { Link } from 'react-router-dom';
 
 
   const listlesson = () => {
@@ -38,6 +39,12 @@ import { divCourse, imgCourse } from './ListCourseStyle';
   
   const listcourse = () => {
     window.location.replace('/listcourse')
+  }
+  const toSeeMore = () =>{
+    window.location.replace('/SeeMore')
+  }
+  const toCourse = () =>{
+    window.location.replace('/Course')
   }
   const ListCourse = () => {
     const[ListCourse, setListCourse]=useState([])
@@ -99,11 +106,12 @@ import { divCourse, imgCourse } from './ListCourseStyle';
         >
                 {ListCourse.map((w,index)=>{
                 return <divCourse>
-                            <img style={{ width: 350, height: 300, marginRight: 50,}} src={w.image} onClick={listlesson}/>
+                            <h1>{w.name}</h1>
+                            <img style={{ width: 350, height: 300, marginRight: 50,}} src={w.image}/>
                         
                             <Stack spacing={2} direction="row">
-                                <Button variant="contained">Đăng ký</Button>
-                                <Button variant="outlined">Xem thêm</Button>
+                                <Button variant="contained" onClick={toCourse}>Đăng ký</Button>
+                                <Button variant="outlined" onClick={toSeeMore}>Xem thêm</Button>
                             </Stack>
                     
                 </divCourse>
