@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link } from 'react-router-dom';
 import ReorderIcon from '@mui/icons-material/Reorder';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,8 +27,8 @@ import ReorderIcon from '@mui/icons-material/Reorder';
     window.location.replace('/')
   }
   
-  const listcourse = () => {
-    window.location.replace('/listcourse')
+  const toCourse = () => {
+    window.location.replace('/Course')
   }
 
   const toExercise = () => {
@@ -46,7 +47,7 @@ import ReorderIcon from '@mui/icons-material/Reorder';
     const classes = useStyles();
     return(
       <div>
-        <Stack spacing={2} direction="row"
+        <Stack spacing={3} direction="row"
                 style={{
                     
                   }}
@@ -56,6 +57,9 @@ import ReorderIcon from '@mui/icons-material/Reorder';
                     </Button>
                     <Button onClick={home}>
                         <img src={logo} width='100px'/>
+                    </Button>
+                    <Button onClick={toCourse}>
+                        <ArrowBackIosIcon/>
                     </Button>
                     
             </Stack>
